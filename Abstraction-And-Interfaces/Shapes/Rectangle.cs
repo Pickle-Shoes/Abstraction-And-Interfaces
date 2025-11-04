@@ -6,27 +6,29 @@ using System.Threading.Tasks;
 
 namespace Abstraction_And_Interfaces.Shapes
 {
-    public class Circle : IShape
+    public class Rectangle : IShape
     {
-        //field
-        public double Radius;
+        //fields 
+        public double height;
+        public double width;
 
         //constructor
-        public Circle(double r) 
-        {
-            Radius = r;
-        }
 
+        public Rectangle(double h, double w)
+        {
+            height = h;
+            width = w;
+        }
 
         //methods
         public double CalculateArea()
         {
-            return Math.PI * Radius * Radius;
+            return height * width;
         }
-        
+
         public double CalculatePerimeter()
         {
-            return 2 * Math.PI * Radius;
+            return 2*height + 2*width;
         }
     }
 }

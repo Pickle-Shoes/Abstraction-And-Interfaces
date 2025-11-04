@@ -9,5 +9,6 @@ namespace Abstraction_And_Interfaces.Shapes
     public interface IShape
     {
         double CalculateArea();
+        double CalculatePerimeter();
     }
 }
