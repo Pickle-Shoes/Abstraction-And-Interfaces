@@ -1,4 +1,5 @@
 ﻿using Abstraction_And_Interfaces.Logger;
+using Abstraction_And_Interfaces.Printer;
 using Abstraction_And_Interfaces.Shapes;
 
 namespace Abstraction_And_Interfaces
@@ -23,6 +24,11 @@ namespace Abstraction_And_Interfaces
 
             logger = new FileLogger();
             logger.Log("This is a file message");
+
+            MultiFunctionPrinter mfp = new MultiFunctionPrinter();
+            mfp.Print();
+            mfp.Scan();
+            mfp.Copy();
 
         }
     }
