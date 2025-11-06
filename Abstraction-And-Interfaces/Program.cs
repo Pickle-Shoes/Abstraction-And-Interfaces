@@ -1,4 +1,5 @@
-﻿using Abstraction_And_Interfaces.Shapes;
+﻿using Abstraction_And_Interfaces.Logger;
+using Abstraction_And_Interfaces.Shapes;
 
 namespace Abstraction_And_Interfaces
 {
@@ -12,6 +13,17 @@ namespace Abstraction_And_Interfaces
             IShape rectangle = new Rectangle(5, 2);
             Console.WriteLine($"Rectangle area: {rectangle.CalculateArea()}");
             Console.WriteLine($"Rectangle perimeter: {rectangle.CalculatePerimeter()}");
+
+            Console.WriteLine("-------");
+
+
+            ILogger logger;
+            logger = new ConsoleLogger();
+            logger.Log("This is a console message.");
+
+            logger = new FileLogger();
+            logger.Log("This is a file message");
+
         }
     }
 }
